@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_grey_2"
+    tools:context=".presenter.fragment.MainFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/search_frame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="14dp"
+        android:padding="20dp">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edittext_search"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/custom_edit_text_rounded"
+            android:hint="Введите имя или номер дела"
+            android:inputType="text"
+            android:paddingHorizontal="12dp"
+            android:textColor="@color/light_grey_1"
+            android:textColorHint="@color/light_grey_2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="- или -"
+            android:textColor="@color/light_grey_2"
+            app:layout_constraintBottom_toTopOf="@id/edittext_schedule"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/button_search" />
+
+        <Button
+            android:id="@+id/button_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/dark_grey_3"
+            android:text="Поиск"
+            android:textColor="@color/light_grey_1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edittext_search" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edittext_schedule"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/custom_edit_text_rounded"
+            android:hint="Введите дату вида 01.01.2000"
+            android:inputType="date"
+            android:paddingHorizontal="12dp"
+            android:textColor="@color/light_grey_1"
+            android:textColorHint="@color/light_grey_2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/button_search" />
+
+        <Button
+            android:id="@+id/button_schedule"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/dark_grey_3"
+            android:text="Показать расписание"
+            android:textColor="@color/light_grey_1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edittext_schedule" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>
